@@ -1,0 +1,12 @@
+
+SELECT nombre_cliente,nombre,apellido1, codigo_empleado_rep_ventas, codigo_empleado, cliente.codigo_cliente
+FROM empleado
+FULL OUTER JOIN cliente
+ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado
+FULL OUTER JOIN pago
+ON cliente.codigo_cliente = pago.codigo_cliente
+WHERE codigo_empleado_rep_ventas IS NOT NULL
+
+;
+
+SELECT * from pago;

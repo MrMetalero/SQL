@@ -1,0 +1,12 @@
+
+
+SELECT count(especialidad), docentes.especialidad
+FROM docentes
+WHERE especialidad IS NOT NULL
+GROUP BY docentes.especialidad
+ORDER BY docentes.especialidad
+
+
+
+
+

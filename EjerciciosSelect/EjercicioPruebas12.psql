@@ -1,0 +1,11 @@
+
+SELECT nom, poblacio 
+FROM poblacions
+WHERE poblacio > (SELECT AVG(poblacions.poblacio) 
+FROM poblacions)
+ORDER BY poblacio ASC
+
+
+
+
+

@@ -1,0 +1,4 @@
+SELECT *
+FROM producto
+WHERE gama = 'Ornamentales' AND cantidad_en_stock > 100
+ORDER BY precio_venta DESC

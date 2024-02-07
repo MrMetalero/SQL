@@ -1,0 +1,8 @@
+
+
+
+
+SELECT poblacions.nom, instituts.nom
+FROM poblacions LEFT JOIN instituts
+ON poblacions.cod_m = instituts.cod_m
+ORDER BY poblacions.nom;

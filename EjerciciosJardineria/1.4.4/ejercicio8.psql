@@ -1,0 +1,5 @@
+SELECT codigo_cliente
+FROM pago
+WHERE fecha_pago BETWEEN '2008-1-01' AND '2008-12-31'
+GROUP BY codigo_cliente
+;

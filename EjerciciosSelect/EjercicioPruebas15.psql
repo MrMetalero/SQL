@@ -1,0 +1,9 @@
+
+
+SELECT docentes.especialidad
+FROM docentes
+GROUP BY especialidad
+ORDER BY especialidad
+
+
+

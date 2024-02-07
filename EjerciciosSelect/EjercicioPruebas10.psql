@@ -1,0 +1,7 @@
+
+SELECT nom 
+FROM poblacions
+WHERE nom ~* '^Alba'
+ORDER BY nom
+
+

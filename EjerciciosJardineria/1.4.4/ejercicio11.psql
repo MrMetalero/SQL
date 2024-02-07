@@ -1,0 +1,3 @@
+SELECT * 
+FROM pedido
+WHERE estado = 'Rechazado' AND fecha_pedido BETWEEN '2009-1-01' AND '2009-12-31'

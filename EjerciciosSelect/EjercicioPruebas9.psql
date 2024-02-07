@@ -1,0 +1,9 @@
+
+SELECT nom_c, COUNT (nom) AS A
+FROM poblacions
+WHERE poblacio > 30000
+GROUP BY nom_c
+HAVING COUNT(nom) > 2;
+
+
+

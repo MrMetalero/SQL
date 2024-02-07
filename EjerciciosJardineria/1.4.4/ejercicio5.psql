@@ -1,0 +1,4 @@
+SELECT nombre, apellido1,apellido2, puesto
+FROM empleado
+GROUP BY nombre, apellido1,apellido2, puesto
+HAVING NOT puesto ='Representante Ventas'

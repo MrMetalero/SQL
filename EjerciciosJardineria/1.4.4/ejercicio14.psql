@@ -1,0 +1,3 @@
+SELECT forma_pago
+FROM pago
+GROUP BY forma_pago

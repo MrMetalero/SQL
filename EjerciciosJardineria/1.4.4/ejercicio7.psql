@@ -1,0 +1,3 @@
+SELECT estado
+FROM pedido
+GROUP BY estado

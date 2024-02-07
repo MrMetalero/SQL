@@ -1,0 +1,22 @@
+
+SELECT poblacions.*
+FROM poblacions, instituts
+WHERE poblacions.cod_m = instituts.cod_m
+order by poblacio
+limit 1;
+
+
+SELECT poblacions.*
+FROM poblacions, instituts
+WHERE poblacions.cod_m = instituts.cod_m
+AND
+poblacio = (SELECT min(poblacio)
+FROM poblacions JOIN instituts using(cod_m) )
+GROUP BY poblacions.cod_m
+;
+
+
+
+
+
+

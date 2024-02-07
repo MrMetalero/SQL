@@ -1,0 +1,20 @@
+
+SELECT nombre,telefono, cursos.titulo
+FROM matricula, alumnos,cursos
+WHERE matricula.codigoalumno = alumnos.codigoalumno AND titulo ='Linux LPIC-1'
+ORDER BY nombre;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+SELECT nombre, apellido1,apellido2, email,codigo_jefe
+FROM empleado
+GROUP BY nombre, apellido1,apellido2,email,codigo_jefe
+HAVING codigo_jefe = 7

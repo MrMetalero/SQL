@@ -1,0 +1,6 @@
+SELECT *
+FROM cliente
+WHERE ciudad = 'Madrid' AND (codigo_empleado_rep_ventas = 11 OR codigo_empleado_rep_ventas = 30)
+;
+
+

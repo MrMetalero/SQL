@@ -1,0 +1,11 @@
+
+
+SELECT nom 
+FROM poblacions
+WHERE nom_c = 'Alt Maestrat'
+ORDER BY altura DESC
+
+
+
+
+

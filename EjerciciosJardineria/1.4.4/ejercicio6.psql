@@ -1,0 +1,4 @@
+SELECT nombre_cliente, pais
+FROM cliente
+WHERE pais = 'Spain'
+;

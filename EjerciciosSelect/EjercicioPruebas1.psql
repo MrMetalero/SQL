@@ -1,0 +1,11 @@
+
+SELECT provincia,(SELECT COUNT(DISTINCT nom_c) AS CONTADO_COMARCAS)
+FROM comarques
+
+
+GROUP BY provincia;
+
+
+
+
+

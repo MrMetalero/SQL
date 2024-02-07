@@ -1,0 +1,4 @@
+SELECT ciudad, telefono
+FROM oficina
+GROUP BY ciudad,telefono,pais
+HAVING pais = 'España';

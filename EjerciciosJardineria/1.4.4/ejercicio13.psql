@@ -1,0 +1,4 @@
+SELECT * 
+FROM pago
+WHERE date_part('year',fecha_pago) = '2008' AND forma_pago = 'PayPal'
+ORDER BY total DESC

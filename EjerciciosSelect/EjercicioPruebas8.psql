@@ -1,0 +1,9 @@
+
+SELECT nom_c, poblacio, nom 
+FROM poblacions
+WHERE poblacio > 30000
+ORDER BY nom_c, poblacio;
+
+
+
+

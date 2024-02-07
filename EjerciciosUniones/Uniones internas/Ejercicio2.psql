@@ -1,0 +1,9 @@
+
+
+SELECT titulo,categoria,nombre,especialidad
+FROM cursos,docencia,docentes
+WHERE docencia.profe = docentes.dniprof
+AND docencia.curso = cursos.codigocurso
+
+
+

@@ -1,0 +1,14 @@
+
+
+
+SELECT nom
+FROM poblacions, comarques
+WHERE comarques.provincia ~* 'Alacant' AND nom ~* '^Alba'
+ORDER BY nom DESC
+
+
+
+
+
+
+

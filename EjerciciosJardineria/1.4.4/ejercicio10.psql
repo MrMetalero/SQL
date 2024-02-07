@@ -1,0 +1,3 @@
+SELECT codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega
+FROM pedido
+WHERE fecha_esperada -fecha_entrega >= 2

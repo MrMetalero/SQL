@@ -1,0 +1,10 @@
+SELECT puesto, nombre,apellido1,apellido2, email
+FROM empleado
+GROUP BY puesto, nombre,apellido1,apellido2, email, codigo_jefe
+HAVING codigo_jefe IS NULL
+
+;
+
+
+SELECT * 
+FROM empleado

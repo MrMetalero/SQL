@@ -1,0 +1,7 @@
+SELECT nom_c, nom
+FROM poblacions
+ORDER BY nom_c, nom;
+
+
+
+

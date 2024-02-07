@@ -1,0 +1,3 @@
+
+SELECT codigo_oficina, ciudad
+FROM oficina

@@ -1,0 +1,7 @@
+SELECT departamento.id, departamento.nombre, profesor.nombre , count(profesor.nombre)
+FROM departamento INNER JOIN profesor
+ON departamento.id = profesor.id_departamento
+GROUP BY departamento.nombre, departamento.id, profesor.nombre
+ORDER BY departamento.id;
+
+-- Está mal, hay que corregirlo

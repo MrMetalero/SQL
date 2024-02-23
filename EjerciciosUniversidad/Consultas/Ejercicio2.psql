@@ -1,0 +1,8 @@
+SELECT * 
+FROM (asignatura INNER JOIN alumno_se_matricula_asignatura
+ON asignatura.id=alumno_se_matricula_asignatura.id_asignatura) INNER JOIN
+curso_escolar ON curso_escolar.id = alumno_se_matricula_asignatura.id_curso_escolar
+WHERE curso_escolar.anyo_inicio='2014';
+
+
+

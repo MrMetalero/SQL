@@ -7,3 +7,10 @@ LEFT JOIN asignatura
 ON alumno_se_matricula_asignatura.id_asignatura = asignatura.id
 
 WHERE  persona.sexo = 'M'
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+SELECT nombre
+FROM profesor LEFT JOIN persona
+ON id_profesor = persona.id
+WHERE telefono IS NULL;

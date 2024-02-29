@@ -1,0 +1,8 @@
+
+SELECT id_alumno, nombre,apellido1,apellido2
+FROM alumno_se_matricula_asignatura LEFT JOIN persona
+ON id_alumno = persona.id
+GROUP BY id_alumno, nombre,apellido1,apellido2
+ORDER BY apellido1 DESC
+;
+

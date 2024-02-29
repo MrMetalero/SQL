@@ -1,0 +1,5 @@
+SELECT nombre, apellido1, apellido2, telefono
+FROM alumno_se_matricula_asignatura LEFT JOIN persona
+ON id_alumno = persona.id
+WHERE telefono ISNULL
+GROUP BY nombre, apellido1, apellido2, telefono;

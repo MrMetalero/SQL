@@ -1,0 +1,7 @@
+SELECT nombre, fecha_nacimiento
+FROM alumno_se_matricula_asignatura LEFT JOIN persona
+ON id_alumno = persona.id
+WHERE  date_part('year',fecha_nacimiento) = '1998'
+GROUP BY nombre,fecha_nacimiento
+
+ 

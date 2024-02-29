@@ -1,0 +1,8 @@
+
+SELECT nombre, cuatrimestre, curso, asignatura.id_grado
+FROM asignatura 
+WHERE cuatrimestre = 1 AND curso = 3 AND id_grado = 7
+
+
+
+

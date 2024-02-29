@@ -1,0 +1,9 @@
+SELECT persona.*, curso_escolar.anyo_inicio
+FROM alumno_se_matricula_asignatura LEFT JOIN persona
+ON id_alumno = persona.id 
+LEFT JOIN curso_escolar 
+ON alumno_se_matricula_asignatura.id_alumno = curso_escolar.id
+LEFT JOIN asignatura
+ON alumno_se_matricula_asignatura.id_asignatura = asignatura.id
+
+WHERE  persona.sexo = 'M'

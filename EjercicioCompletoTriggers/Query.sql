@@ -30,34 +30,46 @@ BEGIN
     );
 
 
-
 END;
 $$;
 
 
 
 
---Procedimiento de el 3er apartado
+--Procedimiento de el 3er apartado--
 
 CREATE OR REPLACE PROCEDURE comprobar_max_alumnos(codigo_curso varchar)
 LANGUAGE plpgsql AS 
 $$
 DECLARE
     numero_alumnos int;
+    var_codigo_curso varchar = codigo_curso;
 
 BEGIN
+    SELECT @numero_alumnos = COUNT(DISTINCT codigoalumno),codigocurso
+    FROM matricula
+    WHERE codigocurso = @var_codigo_curso
+    GROUP BY codigocurso;
 
-    SELECT * INTO numero_
-    
-    RAISE NOTICE '';
+
+    IF @numero_alumnos >= 20 THEN 
+    RAISE NOTICE 'Se han superado los alumnos VERDADERO';
+    END IF;
 
 END;
 $$;
 
 
 
+SELECT * FROM matricula
 
+--Selecciona la cuenta de los codigoalumno de aquellos que están en un curso concreto
+SELECT COUNT(DISTINCT codigoalumno),codigocurso
+FROM matricula
+WHERE codigocurso = 'AE96IN015'
+GROUP BY  codigocurso
 
+CALL comprobar_max_alumnos()
 
 
 

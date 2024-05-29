@@ -43,15 +43,19 @@ LANGUAGE plpgsql AS
 $$
 DECLARE
     numero_alumnos int;
-    var_codigo_curso varchar = codigo_curso;
+    var_codigo_curso varchar := codigo_curso;
+    resultado_sel int;
 
 BEGIN
+    RAISE NOTICE 'A';
     SELECT @numero_alumnos = COUNT(DISTINCT codigoalumno),codigocurso
+    INTO resultado_sel
     FROM matricula
-    WHERE codigocurso = @var_codigo_curso
+    WHERE codigocurso = var_codigo_curso
     GROUP BY codigocurso;
+    RAISE NOTICE 'B';
 
-
+    
     IF @numero_alumnos >= 20 THEN 
     RAISE NOTICE 'Se han superado los alumnos VERDADERO';
     END IF;
@@ -67,9 +71,9 @@ SELECT * FROM matricula
 SELECT COUNT(DISTINCT codigoalumno),codigocurso
 FROM matricula
 WHERE codigocurso = 'AE96IN015'
-GROUP BY  codigocurso
+GROUP BY codigocurso
 
-CALL comprobar_max_alumnos()
+CALL comprobar_max_alumnos(codigo_curso:='AE96IN015')
 
 
 

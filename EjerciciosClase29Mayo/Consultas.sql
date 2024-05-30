@@ -27,6 +27,9 @@ INNER JOIN matricula ON matricula.codigoalumno = alumnos.codigoalumno
 INNER JOIN cursos ON cursos.codigocurso = matricula.codigocurso
 WHERE cursos.titulo = 'Programación Android'
 
+--CUARTO EJERCICIO--
+SELECT cursos.titulo, cursos.categoria FROM cursos
+WHERE cursos.categoria ='BBDD y Big Data' AND cursos.fechaini < '2019-05-01'
 
 
 

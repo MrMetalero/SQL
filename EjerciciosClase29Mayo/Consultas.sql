@@ -32,11 +32,55 @@ SELECT cursos.titulo, cursos.categoria FROM cursos
 WHERE cursos.categoria ='BBDD y Big Data' AND cursos.fechaini < '2019-05-01'
 
 
+--QUINTO EJERCICIO--
+CREATE OR REPLACE VIEW v_categorias
+AS (SELECT cursos.titulo, cursos.categoria 
+FROM cursos 
+WHERE cursos.horas > '30' 
+AND cursos.categoria !='Administración de Redes' AND cursos.categoria !='Internet' AND cursos.categoria != 'Ciberseguridad'
+)
+
+
+--SEXTO EJERCICIO--
+        --Recordar en este ejercicio que necesito en el where una asociación con la tabla fuera
+        --de la subconsulta para poder relacionarla con ella. Si no, EXISTS retorna true siempre en este ejemplo --
+CREATE OR REPLACE VIEW con_no_aptos
+AS 
+(
+    SELECT cursos.* 
+    FROM cursos 
+    WHERE EXISTS (
+        SELECT apto FROM matricula 
+        WHERE matricula.codigocurso = cursos.codigocurso
+        AND matricula.apto LIKE 'NO APTO'
+    )
+)
 
 
 
+--SÉPTIMO EJERCICIO--
+
+CREATE OR REPLACE FUNCTION AS funcionX()
+RETURNS trigger
+LANGUAGE plpgsql AS 
+$body$
+    DECLARE 
+    num_alumnos integer;
+
+    BEGIN
+        SELECT COUNT(codigoalumno) INTO num_alumnos
+        FROM matricula
+        WHERE codigocurso = NEW.codigocurso
+
+    
+    END
+$body$
 
 
+CREATE OR REPLACE CONSTRAINT TRIGGER nombre_trigger
+BEFORE INSERT ON matricula
+FOR EACH ROW
+EXECUTE FUNCTION funcionX();
 
 
 

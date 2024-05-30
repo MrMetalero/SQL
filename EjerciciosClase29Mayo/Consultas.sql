@@ -1,11 +1,5 @@
+-- Active: 1715340009085@@127.0.0.1@5432@cursos2019
 
-SELECT * FROM alumnos
-
-SELECT * FROM cursos
-
-SELECT * FROM matricula
-
-SELECT COUNT(apto) numero_aptos FROM matricula
 
 --RESULTADO EJERCICIO 1--
 SELECT cursos.titulo, cursos.codigocurso, COUNT(apto) FROM matricula

@@ -3,7 +3,6 @@
 CREATE OR REPLACE PROCEDURE eliminar_curso_matricula(codigo_curso varchar)
 LANGUAGE plpgsql AS 
 $$
-
 BEGIN
     DELETE from cursos
     WHERE cursos.codigocurso = codigo_curso;

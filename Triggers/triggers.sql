@@ -9,6 +9,7 @@ BEGIN
         RAISE EXCEPTION 'Docente no tiene la especialidad del curso';
     END IF;
 
+<<<<<<< HEAD
     DELETE FROM matricula WHERE CodigoCurso = codigo_curso;
 
 

@@ -1,0 +1,8 @@
+conduce(fecha:date,dni:varchar,matricula:varchar)
+CP(fecha,DNI)
+VNN Matricula
+
+
+
+
+

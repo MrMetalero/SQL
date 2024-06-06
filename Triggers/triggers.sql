@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -- Active: 1712651638936@@127.0.0.1@5432@cursos2019
+=======
+-- Active: 1715340009085@@127.0.0.1@5432@pedidos
+>>>>>>> d742f814777975c25f4de4df57af71ec540375fb
 
 
 CREATE OR REPLACE PROCEDURE funcion_eliminar(codigo_curso VARCHAR)
@@ -19,6 +23,22 @@ BEGIN
 END;
 $body$;
 
+=======
+CREATE FUNCTION contar_institutos(nombre_pueblo character varying) 
+
+RETURNS integer AS
+$$                          --Este es el indicador del cuerpo de la función
+    DECLARE
+        numero_instituts integer; --Hay que poner el tipo al declarar la variable--
+    BEGIN
+        SELECT COUNT(nombre_pueblo) INTO numero_instituts
+        FROM instituts INNER JOIN poblacions ON instituts.cod_m = poblacions.cod_m
+        WHERE 
+        ;    
+    END
+$$
+LANGUAGE plpgsql            --Este es el lenguage que utiliza la función.
+>>>>>>> d742f814777975c25f4de4df57af71ec540375fb
 
 
 
